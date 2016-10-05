@@ -6,12 +6,17 @@ if [ -f ~/.bashrc ]; then
 fi
 
 # User specific environment and startup programs
+## old-school sort order
+LANG=C
 
+export LANG
 
-export PATH=$PATH:$HOME/bin
-unset USERNAME
+## lot of places to find apps
+PATH=$HOME/.local/bin:$HOME/bin:/usr/local/bin:/usr/local/sbin:/opt/bin:/opt/sbin:/opt/local/bin:/opt/local/sbin:$PATH
 
-# MacPorts Installer addition on 2011-03-24_at_21:31:59: adding an appropriate PATH variable for use with MacPorts.
-export PATH=/opt/local/bin:/opt/local/sbin:$PATH
-# Finished adapting your PATH environment variable for use with MacPorts.
+export PATH
 
+## need wonderful editor
+EDITOR=`which vi`
+
+export EDITOR
