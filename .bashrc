@@ -17,3 +17,6 @@ if [ -f ~/.functions.sh ]
 then
     . ~/.functions.sh
 fi
+
+# want sane commandline edit
+set -o vi
