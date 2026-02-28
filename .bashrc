@@ -104,6 +104,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
-. "$HOME/.local/bin/env"
+if [ -f ~/.local/bin/env ]; then
+    . ~/.local/bin/env
+fi
 
 set -o vi
